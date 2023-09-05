@@ -488,7 +488,7 @@ margin: 0 100px 0 100px;
   #contact {
     margin: 100px 200px 0 200px;
     display: flex;
-    width: 1440px;
+    width: auto;
     flex-direction: column;
     align-items: center;
     gap: 48px;
