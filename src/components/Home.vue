@@ -164,10 +164,10 @@
           </div>
         </div>
         <div class="slides-btn">
-          <button class="next-button" @click="scrollImages(1)">
+          <button class="next-button" @click="scrollImages(-1)">
             <img src="../assets/images/arrowcircleRight.svg" />
           </button>
-          <button class="prev-button" @click="scrollImages(-1)">
+          <button class="prev-button" @click="scrollImages(1)">
             <img src="../assets/images/arrowcircleLeft.svg" />
           </button>
         </div>
@@ -270,7 +270,7 @@ export default {
       currentPage: 1,
       totalImages: 8,
       scrollAmount: 600,
-      menuOpen: false // Initialize a data property to track the menu state
+      menuOpen: false
     };
   },
   methods: {

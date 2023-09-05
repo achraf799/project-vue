@@ -1,13 +1,4 @@
-/* ----------------------Scroll Animation----------------------- */
-
-.hidden {
-    opacity: 0.5;
-    transition: all 1s;
-  }
-  .show {
-    opacity: 1;
-  }
-  /* -------------------------PRODUCTS---------------------------- */
+/* -------------------------PRODUCTS---------------------------- */
   #products {
     display: flex;
     padding: 100px;
@@ -19,7 +10,6 @@
     flex: 1 0 0;
     align-self: stretch;
     max-width: 80%;
-    /* overflow-x: hidden; */
   }
   .title{
     display: none;
@@ -77,7 +67,6 @@
     cursor: pointer;
     display: none;
   }
-  /* ---------------------------------------------- */
   .contact-icon {
     padding-left: 60%;
   }
@@ -239,7 +228,7 @@
     font-size: 55px;
     font-style: normal;
     font-weight: 400;
-    line-height: 60px; /* 109.091% */
+    line-height: 60px; 
     letter-spacing: -0.6px;
   }
   
@@ -312,7 +301,7 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: 25px; /* 147.059% */
+    line-height: 25px; 
     letter-spacing: 0.3px;
   }
   
@@ -363,7 +352,7 @@
     flex-direction: column;
     align-items: center;
     gap: 64px;
-    height: 110vh;
+    height: auto;
     background-color: #fff;
   }
   .container4 {
@@ -421,7 +410,7 @@ font-family: Karla;
 font-size: 17px;
 font-style: normal;
 font-weight: 700;
-line-height: 25px; /* 147.059% */
+line-height: 25px; 
 letter-spacing: 0.3px;
     display: flex;
 width: 143.113px;
@@ -527,7 +516,7 @@ margin: 0 100px 0 100px;
     font-size: 34px;
     font-style: normal;
     font-weight: 700;
-    line-height: 25px; /* 73.529% */
+    line-height: 25px; 
     letter-spacing: 2px;
     margin-bottom: 20px;
   }
@@ -538,7 +527,7 @@ margin: 0 100px 0 100px;
     font-size: 25px;
     font-style: normal;
     font-weight: 600;
-    line-height: 30px; /* 120% */
+    line-height: 30px; 
     letter-spacing: -0.2px;
     margin-bottom: 20px;
   }
@@ -558,7 +547,7 @@ font-family: Varta;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 25px; /* 156.25% */
+line-height: 25px; 
 align-self: stretch;
   }
   .post {
@@ -644,7 +633,6 @@ display: none;  }
     position: absolute;
     top: 1%;
     right: -100%;
-    /* transform: translateX(200%); */
     width: 180px;
     height: 40vh;
     display: flex; 
@@ -873,7 +861,7 @@ flex-shrink: 0;
 font-size: 35px;
 font-style: normal;
 font-weight: 300;
-line-height: 40px; /* 114.286% */
+line-height: 40px; 
 letter-spacing: -0.3px;
   }
 
@@ -918,7 +906,7 @@ font-family: Merriweather;
 font-size: 35px;
 font-style: normal;
 font-weight: 400;
-line-height: 40px; /* 114.286% */
+line-height: 40px; 
 letter-spacing: -0.3px;
   }
 
@@ -1094,7 +1082,7 @@ gap: 10px;
 
   .footer {
     display: flex;
-    flex-direction: column; /* Add this line */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     align-self: stretch;
@@ -1457,7 +1445,7 @@ font-family: Merriweather;
 font-size: 35px;
 font-style: normal;
 font-weight: 400;
-line-height: 40px; /* 114.286% */
+line-height: 40px; 
 letter-spacing: -0.3px;
   }
 
