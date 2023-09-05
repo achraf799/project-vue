@@ -19,13 +19,14 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #f3eee8;
   margin: 0;
   padding: 0;
-  /* width: 100%; */
+  position: relative;
   overflow-x: hidden;
 }
 </style>

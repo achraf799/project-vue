@@ -2,7 +2,8 @@
   <div class="antic">
     <!-- ------------------------------------------------------------------ -->
     <div id="products">
-      <nav>
+      <h1 class="title">antic</h1>
+      <nav class="navlist" :class="{ open: menuOpen }">
         <ul>
           <li>
             <span class="navbar-title">antic</span>
@@ -25,7 +26,9 @@
           <img src="../assets/images/Contact.svg" />
         </a>
       </nav>
-
+      <div class="bx bx-menu" id="menu-icon" @click="toggleMenu()">
+        <img src="../assets/images/Menu.svg" />
+      </div>
       <div class="container1">
         <div class="home-text" data-aos="zoom-in" data-aos-duration="1000">
           <h3>HOME DESIGN</h3>
@@ -40,26 +43,29 @@
           <a href="#rooms">
             <img src="../assets/images/arrowDown.svg" />
           </a>
+          <a class="down" href="#rooms">
+            <img src="../assets/images/downWhite.svg" />
+          </a>
         </div>
-        <img src="../assets/images/lights.png" />
+        <img class="lights" src="../assets/images/lights.png" />
       </div>
     </div>
     <!-- ------------------------------------------------------------------ -->
     <div id="rooms">
       <div class="container2">
-        <h1>Find your room</h1>
+        <h1 class="container2-text">Find your room</h1>
         <div class="room-info">
           <div class="textcontainer0">
             <p>Dining room, bedroom, bathroom or office. Find what you need</p>
           </div>
-          <div class="room" data-aos="fade-left" data-aos-duration="500">
+          <div class="room1" data-aos="fade-left" data-aos-duration="500">
             <div class="textcontainer1" data-aos="fade-left" data-aos-duration="1000">
-              <h1>Bedroom</h1>
+              <h1 class="bedroom-text">Bedroom</h1>
             </div>
             <img src="../assets/images/bedroom.png" />
             <p>New arrivals</p>
           </div>
-          <div class="room" data-aos="fade-left" data-aos-duration="1000">
+          <div class="room2" data-aos="fade-left" data-aos-duration="1000">
             <div class="textcontainer1">
               <h1>Living room</h1>
             </div>
@@ -225,10 +231,13 @@
         <div class="column2">
           <div class="text-container">
             <h3>We respect our planet</h3>
-            <img src="../assets/images/post.png" />
-            <p>We’re taking positive steps to reduce our impact on the planet. For us, that means retailing responsibly.</p>
+            <img class="post" src="../assets/images/post.png" />
+            <span
+              class="post-text"
+            >We’re taking positive steps to reduce our impact on the planet. For us, that means retailing responsibly.</span>
             <button class="more">
               <span>Learn more</span>
+              <img src="../assets/images/arrowRight.svg" />
             </button>
           </div>
         </div>
@@ -240,7 +249,7 @@
         <img src="../assets/images/Instagram.svg" />
       </div>
       <div class="footer">
-        <p>© 2021 Agence Dnd</p>
+        <p class="agence">© 2021 Agence Dnd</p>
         <p>Privacy policy</p>
         <p>Term of service</p>
         <p>Language</p>
@@ -250,7 +259,7 @@
   </div>
 </template>
 
-<script >
+<script>
 export default {
   name: "HomePage",
   props: {
@@ -260,7 +269,8 @@ export default {
     return {
       currentPage: 1,
       totalImages: 8,
-      scrollAmount: 200
+      scrollAmount: 600,
+      menuOpen: false // Initialize a data property to track the menu state
     };
   },
   methods: {
@@ -277,10 +287,26 @@ export default {
         Math.floor(
           (scrollLeft + photosSlides.clientWidth / 2) / photosSlides.clientWidth
         ) + 1;
+    },
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen; // Toggle the menu state
+    }
+  },
+  mounted() {
+    const currentLocation = location.href;
+    const menuItem = document.querySelectorAll("nav ul li a");
+    const menuLength = menuItem.length;
+
+    for (let i = 0; i < menuLength; i++) {
+      if (menuItem[i].href === currentLocation) {
+        menuItem[i].classList.add("active");
+      }
     }
   }
 };
 </script>
+
+
 <style scoped src="./style.css">
 </style>
 
