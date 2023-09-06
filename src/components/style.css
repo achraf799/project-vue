@@ -1418,7 +1418,7 @@ letter-spacing: -0.3px;
   }
   /* ---------------------------------------------------- */
   #services {
-    padding: 50px 80px 0px 80px;
+    padding: 50px 80px 50px 80px;
     gap: 16px;
     height: 85vh;
     margin: 0;
